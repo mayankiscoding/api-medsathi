@@ -1,0 +1,1 @@
+## Flask app for MedSathi, to be used as API
