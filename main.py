@@ -1,10 +1,8 @@
 # ALL THE LIBRARY THIS PROJECT USES
 from flask import Flask , request, jsonify
-# import easyocr,cv2
 import pandas as pd
 from thefuzz import fuzz
 from string import digits, punctuation
-# from playsound import playsound
 
 # DEFINING OBJECT
 app = Flask(__name__)
@@ -12,7 +10,7 @@ app = Flask(__name__)
 # DEFINIG FIRST PAGE AND IT'S INPUT METHOD
 @app.route('/')
 def main():
-	return ' hell biuablwbeaorhiuwehcrwhelchwencjrnlcnj'
+	return ' HELLO WORLD '
 
 @app.route('/predict', methods=['POST','GET'])
 def predict():
