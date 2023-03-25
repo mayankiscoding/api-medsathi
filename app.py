@@ -7,7 +7,7 @@ from string import digits, punctuation
 # DEFINING OBJECT
 app = Flask(__name__)
 
-# DEFINIG FIRST PAGE AND IT'S INPUT METHOD
+# DEFINIG FIRST PAGE 
 @app.route('/')
 def main():
 	return ' HELLO WORLD '
@@ -61,7 +61,3 @@ def predict():
 
 if __name__ == '__main__':
 	app.run(debug=True)
-
-
-# AND PRESS s for capture
-# YOU FACEs
