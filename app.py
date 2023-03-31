@@ -1,5 +1,5 @@
 # ALL THE LIBRARY THIS PROJECT USES
-from flask import Flask , request, jsonify
+from flask import Flask , request, jsonify, cv2, easyocr
 import pandas as pd
 from thefuzz import fuzz
 from string import digits, punctuation
@@ -14,15 +14,17 @@ def main():
 
 @app.route('/predict', methods=['POST','GET'])
 def predict():
-	text = request.form.get('text')
-	# path = cv2.imread(path) 
-	# reader = easyocr.Reader(['en'])
 
-	# results = reader.readtext(path)
+	img = request.form.get('image')
+
+	path = cv2.imread(img) 
+	reader = easyocr.Reader(['en'])
+
+	results = reader.readtext(path)
 	
-	# text = ' ' 
-	# for result in results:
-	# 	text += result[1] + ' '
+	text = ' ' 
+	for result in results:
+		text += result[1] + ' '
 
 	# print(p,'\n',text,'\n',p)
 
