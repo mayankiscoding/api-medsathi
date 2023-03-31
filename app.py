@@ -1,5 +1,6 @@
 # ALL THE LIBRARY THIS PROJECT USES
-from flask import Flask , request, jsonify, cv2, easyocr
+from flask import Flask , request, jsonify
+import cv2, easyocr
 import pandas as pd
 from thefuzz import fuzz
 from string import digits, punctuation
