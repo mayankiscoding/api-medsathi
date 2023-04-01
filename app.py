@@ -1,6 +1,6 @@
 # ALL THE LIBRARY THIS PROJECT USES
 from flask import Flask , request, jsonify
-import easyocr, cv2
+import easyocr, flask
 from PIL import Image
 import pandas as pd
 from thefuzz import fuzz
@@ -12,7 +12,7 @@ app = Flask(__name__)
 # DEFINIG FIRST PAGE 
 @app.route('/')
 def main():
-	return ' HELLO WORLD '
+	return flask.render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
