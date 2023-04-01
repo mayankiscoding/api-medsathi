@@ -1,6 +1,6 @@
 # ALL THE LIBRARY THIS PROJECT USES
 from flask import Flask , request, jsonify
-import cv2, easyocr
+import easyocr
 from PIL import Image
 import pandas as pd
 from thefuzz import fuzz
