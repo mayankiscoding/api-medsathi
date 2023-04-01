@@ -1,6 +1,6 @@
 # ALL THE LIBRARY THIS PROJECT USES
 from flask import Flask , request, jsonify
-import easyocr
+import easyocr, cv2
 from PIL import Image
 import pandas as pd
 from thefuzz import fuzz
@@ -53,11 +53,11 @@ def predict():
 		if max(l) >= 80:
 			bimari = data["Disease"][index]
 			dawai = data["Medicine"][index]
-			out = {'Ailments': bimari, 'Disease': dawai}
+			out = {'Ailments': bimari, 'Medicine': dawai}
 		else :
 			bimari = 'Not available in database'
 			dawai = 'Unreadable image'
-			out = {'Ailments': bimari, 'Disease': dawai}
+			out = {'Ailments': bimari, 'Medicine': dawai}
 
 			
 	return jsonify(out)
