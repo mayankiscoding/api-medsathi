@@ -12,6 +12,7 @@ Jinja2
 lazy_loader 
 MarkupSafe
 opencv-python==4.5.5.64
+python-Levenshtein
 mpmath 
 networkx 
 ninja 
